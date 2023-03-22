@@ -1,0 +1,26 @@
+{
+  "name": "pics-search-unsplash-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pics-search/unsplash-api/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/pics-search/unsplash-api",
+        "main": "libs/pics-search/unsplash-api/src/index.ts",
+        "tsConfig": "libs/pics-search/unsplash-api/tsconfig.lib.json",
+        "assets": ["libs/pics-search/unsplash-api/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/pics-search/unsplash-api/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
